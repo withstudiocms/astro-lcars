@@ -1,0 +1,38 @@
+---
+import "../styles/lcars.styl";
+import "../styles/reset.css";
+import LCARSAudio from "../components/LCARSAudio.astro";
+import { Font } from "astro:assets";
+import LCARSFrame from "../components/LCARSFrame.astro";
+
+interface Props {
+    siteTitle?: string;
+    title?: string;
+    pageKey: string;
+}
+
+const { siteTitle = "Astro LCARS", title, pageKey } = Astro.props;
+
+const pageTitle = title ? `${title} | ${siteTitle}` : siteTitle;
+---
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <link rel="icon" href="/favicon.ico" />
+        <meta name="viewport" content="width=device-width" />
+        <meta name="generator" content={Astro.generator} />
+        <title>{pageTitle}</title>
+        <Font cssVariable="--font-lcarsgtj3" preload />
+    </head>
+    <body>
+        <div class="lcars-app-container">
+            <LCARSFrame siteTitle={siteTitle} pageKey={pageKey} />
+            <div id="container">
+                <slot />
+            </div>
+        </div>
+        <LCARSAudio />
+    </body>
+</html>

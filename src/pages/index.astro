@@ -1,17 +1,36 @@
 ---
-
+import Layout from "../layouts/Layout.astro";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout title="Home" pageKey="home">
+	<div class="lcars-column lcars-u-7">
+		<h1>Welcome to Astro LCARS</h1>
+
+		<hr class="lcars-dodger-blue-border" />
+
+		<p>
+			LCARS is a purely client-side CSS and HTML framework, similar to
+			Bootstrap, Foundation, Topcoat, Brick, or Pure to create user
+			interfaces similar to a certain popular sci-fi franchise. Enjoy!
+		</p>
+		<p>
+			There are a few requirements in terms of HTML element nesting and
+			corresponding CSS classes that are necessary for the styling to
+			apply correctly. Looking directly at the source of this
+			demonstration/documentation page should prove instructive. You might
+			even use a copy of this page as a sort of a template; just delete
+			and replace the parts you do not want.
+		</p>
+		<p>
+			Each of the following sections will specify a primary CSS class name
+			(in blue colored text) to assign to an HTML element to apply the
+			appropriate CSS styling rules to achieve the described effect. Many
+			primary classes will also have a list of secondary modifier class
+			names (in red colored text) that can be appended to the class list
+			to give additional styling options. Note that CSS classes are
+			cumulative and cascading; i.e., you can combine them and the styling
+			effects will (mostly) be inherited by the descendent nested-within
+			html elements.
+		</p>
+	</div></Layout
+>

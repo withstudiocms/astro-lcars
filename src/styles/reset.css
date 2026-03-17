@@ -1,0 +1,46 @@
+p,
+h1,
+h2,
+h3 {
+    margin-top: 1em;
+}
+
+pre {
+    display: inline;
+    white-space: pre-line;
+    word-wrap: break-word;
+}
+
+table.localCustomFunWithCaptions caption {
+    margin-left: -.5em;
+    margin-bottom: .5em;
+    text-align: right;
+    border-right: .8em solid;
+    border-left: 32rem solid;
+    border-radius: .5em;
+    padding-right: .33em;
+    padding-bottom: -.15em;
+}
+
+#audio_class_summary {
+    font-size: .9rem;
+}
+
+hr {
+    width: 100%;
+    border: none;
+    border-bottom: .2rem solid #FFFFFF;
+}
+
+.lcars-bar.lock-bottom {
+    height: 20%;
+}
+
+.lcars-bar.stretch {
+    flex: 1;
+}
+
+.text {
+    color: var(--bg-color);
+    filter: url(#bwFilter);
+}

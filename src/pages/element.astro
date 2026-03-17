@@ -1,0 +1,270 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Element" pageKey="element"
+    ><div class="lcars-column lcars-u-7">
+        <!-- ELEMENT -->
+        <h1 id="element_section">Element</h1>
+
+        <span
+            >Class: <pre
+                class="lcars-dodger-blue-color">lcars-element</pre></span
+        >
+        <p>
+            <a
+                >Elements are the basic blocks of LCARS. They can be used as
+                buttons and indicators. Use the grid classes to set the size.
+                The html "div" is typically the preferred tag to assign the
+                lcars-element tag to.</a
+            >
+
+            <ul>
+                <li>
+                    <span
+                        ><pre class="lcars-rust-color">left-rounded</pre>:
+                        rounds the left edge</span
+                    >
+                </li>
+                <li>
+                    <span
+                        ><pre class="lcars-rust-color">right-rounded</pre>:
+                        rounds the right edge</span
+                    >
+                </li>
+                <li>
+                    <span
+                        ><pre class="lcars-rust-color">rounded</pre>: rounds the
+                        all edges</span
+                    >
+                </li>
+                <li>
+                    <span
+                        ><pre class="lcars-rust-color">button</pre>: Add button
+                        behaviour. Optionally can include automatic <a
+                            href="#audio_section">Audible effect</a
+                        >.</span
+                    >
+                </li>
+            </ul>
+        </p>
+
+        <span
+            >Class: <pre
+                class="lcars-dodger-blue-color">lcars-element-addition</pre></span
+        >
+        <p>
+            <a>Use within element. Adds an indicator to the element.</a>
+        </p>
+
+        <span
+            >Class: <pre
+                class="lcars-dodger-blue-color">lcars-element-decorator</pre></span
+        >
+
+        <p>
+            <a
+                >Use within element. Adds a decorator to the left of the
+                element.</a
+            >
+
+            <ul>
+                <li>
+                    <span
+                        ><pre class="lcars-rust-color">right</pre>: adds the
+                        decorator to the right
+                    </span>
+                </li>
+            </ul>
+        </p>
+
+        <h3>Example</h3>
+
+        <p>
+            <div class="lcars-column">
+                <div class="lcars-row">
+                    <div class="lcars-column">
+                        <div class="lcars-row">
+                            <div class="lcars-element"></div>
+                            <div class="lcars-element button">Button</div>
+                            <div class="lcars-element lcars-red-alert-bg">
+                                Coloured
+                            </div>
+                        </div>
+                        <div class="lcars-row">
+                            <div class="lcars-element left-rounded">
+                                left round
+                            </div>
+                            <div class="lcars-element right-rounded">
+                                right round
+                            </div>
+                            <div class="lcars-element rounded">round</div>
+                        </div>
+                    </div>
+                    <div class="lcars-element lcars-u-1-2">tall</div>
+                </div>
+                <div class="lcars-row">
+                    <div class="lcars-element lcars-u-2-1">double</div>
+                    <div class="lcars-element lcars-u-2-1 lcars-lilac-bg">
+                        <div>with</div>
+                        <div class="lcars-element-addition">addition</div>
+                    </div>
+                </div>
+            </div>
+        </p>
+
+        <h2 id="elbow_section">Elbow</h2>
+
+        <span
+            >Class: <pre class="lcars-dodger-blue-color">lcars-elbow</pre></span
+        >
+        <p>
+            <a>The iconic elbow.</a>
+
+            <ul>
+                <li>
+                    <span
+                        ><pre class="lcars-rust-color">right-top</pre>: elbows
+                        faces to the top right.
+                    </span>
+                </li>
+                <li>
+                    <span
+                        ><pre class="lcars-rust-color">left-top</pre>: elbows
+                        faces to the top left.
+                    </span>
+                </li>
+                <li>
+                    <span
+                        ><pre class="lcars-rust-color">right-bottom</pre>:
+                        elbows faces to the bottom right.
+                    </span>
+                </li>
+                <li>
+                    <span
+                        ><pre class="lcars-rust-color">left-bottom</pre>: elbows
+                        faces to the bottom left.
+                    </span>
+                </li>
+            </ul>
+        </p>
+
+        <h3>Example</h3>
+
+        <p>
+            <div class="lcars-row">
+                <div class="lcars-elbow right-top lcars-golden-tanoi-bg">
+                    <a>right-top</a>
+                </div>
+                <div class="lcars-bar double-spacer"></div>
+                <div class="lcars-elbow left-top lcars-golden-tanoi-bg">
+                    <a>left-top</a>
+                </div>
+                <div class="lcars-bar spacer"></div>
+                <div
+                    class="lcars-bar horizontal lcars-blue-bell-bg bottom both-divider"
+                >
+                </div>
+                <div class="lcars-bar spacer"></div>
+                <div
+                    class="lcars-bar horizontal lcars-lavender-purple-bg right-end bottom"
+                >
+                </div>
+            </div>
+        </p>
+        <p>
+            <div class="lcars-row">
+                <div class="lcars-elbow right-bottom lcars-golden-tanoi-bg">
+                    <a>right-bottom</a>
+                </div>
+                <div class="lcars-bar double-spacer"></div>
+                <div class="lcars-elbow left-bottom lcars-golden-tanoi-bg">
+                    <a>left-bottom</a>
+                </div>
+                <div class="lcars-bar spacer"></div>
+                <div
+                    class="lcars-bar horizontal lcars-dodger-blue-bg right-divider"
+                >
+                </div>
+                <div class="lcars-bar spacer"></div>
+                <div
+                    class="lcars-bar horizontal lcars-golden-tanoi-bg right-end"
+                >
+                </div>
+            </div>
+        </p>
+
+        <h2 id="brackets_section">Brackets</h2>
+
+        <span
+            >Class: <pre
+                class="lcars-dodger-blue-color">lcars-bracket</pre></span
+        >
+        <p>
+            <a>Decorative Brackets. Use to group elements.</a>
+
+            <ul>
+                <li>
+                    <span
+                        ><pre class="lcars-rust-color">right</pre>: right
+                        bracket
+                    </span>
+                </li>
+                <li>
+                    <span
+                        ><pre class="lcars-rust-color">left</pre>: left bracket
+                    </span>
+                </li>
+                <li>
+                    <span
+                        ><pre class="lcars-rust-color">top</pre>: top bracket
+                    </span>
+                </li>
+                <li>
+                    <span
+                        ><pre class="lcars-rust-color">bottom</pre>: bottom
+                        bracket
+                    </span>
+                </li>
+            </ul>
+        </p>
+        <h3>Example</h3>
+        <p>
+            <div class="lcars-row">
+                <div class="lcars-bracket left"></div>
+                <div class="lcars-column">
+                    <div class="lcars-element"></div>
+                    <div class="lcars-element"></div>
+                </div>
+                <div class="lcars-bracket right"></div>
+            </div>
+
+            <div class="lcars-row">
+                <div class="lcars-bracket left hollow"></div>
+                <div class="lcars-column">
+                    <div class="lcars-element"></div>
+                    <div class="lcars-element"></div>
+                </div>
+                <div class="lcars-bracket right hollow"></div>
+            </div>
+
+            <div class="lcars-column lcars-u-2">
+                <div class="lcars-bracket top"></div>
+                <div class="lcars-row">
+                    <div class="lcars-element"></div>
+                    <div class="lcars-element"></div>
+                </div>
+                <div class="lcars-bracket bottom"></div>
+            </div>
+
+            <div class="lcars-column lcars-u-2">
+                <div class="lcars-bracket top hollow"></div>
+                <div class="lcars-row">
+                    <div class="lcars-element"></div>
+                    <div class="lcars-element"></div>
+                </div>
+                <div class="lcars-bracket bottom hollow"></div>
+            </div>
+        </p>
+    </div></Layout
+>
