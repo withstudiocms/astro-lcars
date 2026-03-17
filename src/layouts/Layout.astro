@@ -4,6 +4,7 @@ import "../styles/reset.css";
 import LCARSAudio from "../components/LCARSAudio.astro";
 import { Font } from "astro:assets";
 import LCARSFrame from "../components/LCARSFrame.astro";
+import ColorFix from "../components/ColorFix.astro";
 
 interface Props {
     siteTitle?: string;
@@ -34,5 +35,6 @@ const pageTitle = title ? `${title} | ${siteTitle}` : siteTitle;
             </div>
         </div>
         <LCARSAudio />
+        <ColorFix />
     </body>
 </html>

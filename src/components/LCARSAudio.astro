@@ -1,9 +1,4 @@
----
-
----
-
 <audio id="audDummy"></audio>
-
 <script is:inline>
     var lcarsAudio = {
         audioExtensions: {
@@ -28,7 +23,6 @@
                     ""
                 ) {
                     auDummy.src = this.audioPath + "ready." + key;
-                    //TODO: test it further??
                     console.log(
                         auDummy.src + "   " + auDummy.src.lastIndexOf("."),
                     );
@@ -169,28 +163,21 @@
             this.audTactInputNegAcknowledge?.play();
         },
         Alert: function () {
-            //DEBUG//window.console && console.log(this.audAlert.readyState)
             this.audAlert?.play();
-            //TODO:bonus: have a fallback for no supported file types (or MUTE active):
-            //floating div pops up and flashes, then disappears.
         },
         RedAlert: function () {
-            //DEBUG//window.console && console.log(this.audAlert.readyState)
             this.audRedAlert?.play();
-            //TODO:bonus: have a fallback for no supported file types (or MUTE active):
-            //floating div pops up and flashes, then disappears.
         },
         Ready: function () {
-            //TODO: consider putting this in all the other play functions, too. Or maybe moving it out to some kind of in-audible primer sound?
             var promise = this.audReady?.play();
             if (promise !== undefined) {
                 promise
-                    .then((_) => {
+                    .then(() => {
                         console.log(
                             "Sound probably just actually played, so user interaction with document status must be 'true'.",
                         );
                     })
-                    .catch((error) => {
+                    .catch(() => {
                         console.warn(
                             "Autoplay was prevented. User interaction required before playback will be allowed by browser.",
                         );
@@ -203,18 +190,6 @@
         },
     };
 
-    // function enableAudio(el: HTMLElement) {
-    //     if (el.classList.contains("disabled")) {
-    //         el.addEventListener("click", function () {
-    //             lcarsAudio.TactileInputNegativeAcknowledge();
-    //         });
-    //     } else {
-    //         el.addEventListener("click", function () {
-    //             lcarsAudio.TactileInputAcknowledge();
-    //         });
-    //     }
-    // }
-
     //=\\ Standard Wire-up
     var audDummy = document
         .getElementById("audDummy")
@@ -223,7 +198,7 @@
 
     //All "booted" up notification.
     //Many browsers won't play this next sound because the user hasn't "blessed" the action with a UI click yet.
-    document.addEventListener("DOMContentLoaded", function (event) {
+    document.addEventListener("DOMContentLoaded", function () {
         lcarsAudio.Ready();
     });
 </script>

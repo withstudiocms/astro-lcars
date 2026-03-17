@@ -10,15 +10,15 @@ const { siteTitle, pageKey } = Astro.props;
 ---
 
 <div id="header" class="lcars-row header">
-    <!-- ELBOW -->
+    {/* ELBOW */}
     <div class="lcars-elbow left-bottom"></div>
 
-    <!-- BAR WITH TITLE -->
+    {/* BAR WITH TITLE */}
     <div class="lcars-bar horizontal">
         <div class="lcars-title right">{siteTitle}</div>
     </div>
 
-    <!-- ROUNDED EDGE DECORATED -->
+    {/* ROUNDED EDGE DECORATED */}
     <div class="lcars-bar horizontal right-end decorated"></div>
 </div>
 
@@ -27,6 +27,7 @@ const { siteTitle, pageKey } = Astro.props;
     class="lcars-column start-space lcars-u-1"
     style="text-transform: uppercase;"
 >
+    {/* Primary Navigation Links */}
     {
         NAV.map((navItem) => (
             <a href={navItem.href}>
@@ -42,20 +43,30 @@ const { siteTitle, pageKey } = Astro.props;
             </a>
         ))
     }
+
+    {
+        /* Spacer and filler elements to push the nav to the top and add some visual interest */
+    }
     <div class="lcars-bar fill lcars-u-1"></div>
     <div class="lcars-bar spacer"></div>
+
+    {/* Link to source code on GitHub */}
     <a href="https://github.com">
         <div class="lcars-element button nav lcars-chestnut-rose-bg">
             <span class="text">Source</span>
         </div>
     </a>
+
+    {
+        /* Decorative elements to fill out the left menu and add visual interest */
+    }
     <div class="lcars-bar lock-bottom lcars-u-1"></div>
 </div>
 
 <div id="footer" class="lcars-row">
-    <!-- ELBOW -->
+    {/* ELBOW */}
     <div class="lcars-elbow left-top"></div>
-    <!-- BAR -->
+    {/* BAR */}
     <div class="lcars-bar horizontal both-divider bottom">
         <div class="lcars-copy left">
             MIT Licensed {new Date().getFullYear()} - {siteTitle}.
@@ -66,36 +77,6 @@ const { siteTitle, pageKey } = Astro.props;
             any way.
         </div>
     </div>
-    <!-- ROUNDED EDGE -->
+    {/* ROUNDED EDGE */}
     <div class="lcars-bar horizontal right-end left-divider bottom"></div>
 </div>
-
-<svg
-    xmlns="http://www.w3.org/2000/svg"
-    version="1.1"
-    height="0"
-    style="display: none;"
->
-    <defs>
-        <filter id="bwFilter" color-interpolation-filters="sRGB">
-            <!-- Convert to grayscale based on luminance -->
-            <feColorMatrix
-                type="matrix"
-                values="0.2126 0.7152 0.0722 0 0
-                        0.2126 0.7152 0.0722 0 0
-                        0.2126 0.7152 0.0722 0 0
-                        0 0 0 1 0"
-            ></feColorMatrix>
-            <!-- Expand edges slightly to clean up any fringing -->
-            <feMorphology operator="dilate" radius="2"></feMorphology>
-            <!-- Apply the threshold to determine if the color should be black or white -->
-            <feComponentTransfer>
-                <feFuncR type="linear" slope="-255" intercept="128"></feFuncR>
-                <feFuncG type="linear" slope="-255" intercept="128"></feFuncG>
-                <feFuncB type="linear" slope="-255" intercept="128"></feFuncB>
-            </feComponentTransfer>
-            <!-- Composite step to clean up the result -->
-            <feComposite operator="in" in2="SourceGraphic"></feComposite>
-        </filter>
-    </defs>
-</svg>
