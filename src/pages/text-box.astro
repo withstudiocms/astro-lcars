@@ -1,10 +1,11 @@
 ---
+import Column from "../components/Column.astro";
 import Divider from "../components/Divider.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Text Box" pageKey="text-box"
-    ><div class="lcars-column lcars-u-7">
+    ><Column u={7}>
         <h1 id="textbox_section">Text Box</h1>
 
         <Divider color="dodger-blue" />
@@ -98,5 +99,5 @@ import Layout from "../layouts/Layout.astro";
         <div class="lcars-text-box large centered lcars-u-6 blink">
             INCOMING TRANSMISSION
         </div>
-    </div></Layout
+    </Column></Layout
 >

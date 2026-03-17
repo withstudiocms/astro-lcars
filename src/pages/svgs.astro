@@ -3,10 +3,11 @@ import Layout from "../layouts/Layout.astro";
 import LCarsXyControlWidget from "../assets/lcars_xy_circle_widget_optimized.svg";
 import LCarsXyControlWidgetWithClasses from "../assets/lcars_xy_circle_widget_optimized_and_classes.svg";
 import Divider from "../components/Divider.astro";
+import Column from "../components/Column.astro";
 ---
 
 <Layout title="Custom SVGs" pageKey="svgs"
-    ><div class="lcars-column lcars-u-7">
+    ><Column u={7}>
         <h1 id="svg_section">SVG Special Elements</h1>
 
         <Divider color="dodger-blue" />
@@ -320,5 +321,5 @@ document.querySelector("#xy_ctl_up").addEventListener("click", function(){
                 </g>
             </svg>
         </p>
-    </div></Layout
+    </Column></Layout
 >

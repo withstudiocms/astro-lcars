@@ -1,10 +1,11 @@
 ---
+import Column from "../components/Column.astro";
 import Divider from "../components/Divider.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Inputs" pageKey="inputs"
-    ><div class="lcars-column lcars-u-7">
+    ><Column u={7}>
         <h1 id="inputs_section">Inputs</h1>
 
         <Divider color="dodger-blue" />
@@ -197,5 +198,5 @@ import Layout from "../layouts/Layout.astro";
                 </div>
             </form>
         </p>
-    </div></Layout
+    </Column></Layout
 >

@@ -1,10 +1,11 @@
 ---
+import Column from "../components/Column.astro";
 import Divider from "../components/Divider.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Data Tables" pageKey="data-tables"
-    ><div class="lcars-column lcars-u-7">
+    ><Column u={7}>
         <h1 id="table_section">Table</h1>
 
         <Divider color="dodger-blue" />
@@ -271,5 +272,5 @@ import Layout from "../layouts/Layout.astro";
                 </thead>
             </table>
         </p>
-    </div></Layout
+    </Column></Layout
 >

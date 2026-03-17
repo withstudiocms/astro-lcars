@@ -1,10 +1,11 @@
 ---
+import Column from "../components/Column.astro";
 import Divider from "../components/Divider.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Home" pageKey="home">
-	<div class="lcars-column lcars-u-7">
+	<Column u={7}>
 		<h1>Welcome to Astro LCARS</h1>
 
 		<Divider color="dodger-blue" />
@@ -35,5 +36,5 @@ import Layout from "../layouts/Layout.astro";
 			the styling effects will (mostly) be inherited by the descendent
 			nested-within html elements.
 		</p>
-	</div></Layout
+	</Column></Layout
 >
