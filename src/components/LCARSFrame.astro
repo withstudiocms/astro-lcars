@@ -1,5 +1,6 @@
 ---
 import { NAV } from "../nav.js";
+import LElement from "./LElement.astro";
 
 interface Props {
     siteTitle: string;
@@ -31,15 +32,13 @@ const { siteTitle, pageKey } = Astro.props;
     {
         NAV.map((navItem) => (
             <a href={navItem.href}>
-                <div
-                    class:list={[
-                        "lcars-element button nav",
-                        pageKey === navItem.key && "active",
-                        `lcars-${navItem.color}-bg`,
-                    ]}
+                <LElement
+                    color={navItem.color}
+                    button
+                    classList={pageKey === navItem.key ? "nav active" : "nav"}
                 >
-                    <span class="text">{navItem.text}</span>
-                </div>
+                    {navItem.text}
+                </LElement>
             </a>
         ))
     }
@@ -52,9 +51,9 @@ const { siteTitle, pageKey } = Astro.props;
 
     {/* Link to source code on GitHub */}
     <a href="https://github.com/Adammatthiesen/astro-lcars" target="_blank">
-        <div class="lcars-element button nav lcars-chestnut-rose-bg">
-            <span class="text">Source</span>
-        </div>
+        <LElement button classList="nav" color="chestnut-rose">
+            Source
+        </LElement>
     </a>
 
     {
