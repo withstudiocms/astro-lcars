@@ -15,6 +15,7 @@
         audAlert: null,
         audRedAlert: null,
         audReady: null,
+        volume: 0.35,
         initialize: function (auDummy) {
             //Determine browser capability and willingness
             for (var key in this.audioExtensions) {
@@ -35,6 +36,7 @@
                     break;
                 }
             }
+            // Set Audio Track files
             this.audTactInputAcknowledge = new Audio(
                 "audio/tactinput_acknowledge." + this.audioType,
             );
@@ -47,6 +49,14 @@
             this.audAlert = new Audio("audio/alert." + this.audioType);
             this.audRedAlert = new Audio("audio/red_alert." + this.audioType);
             this.audReady = new Audio("audio/ready." + this.audioType);
+
+            // Configure Volumes
+            this.audTactInputAcknowledge.volume = this.volume;
+            this.audTactInputAltAcknowledge.volume = this.volume;
+            this.audTactInputNegAcknowledge.volume = this.volume;
+            this.audAlert.volume = this.volume;
+            this.audRedAlert.volume = this.volume;
+            this.audReady.volume = this.volume;
 
             //Actual Standard Wire-up steps
             var button_list = document.querySelectorAll(
