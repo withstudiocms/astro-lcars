@@ -1,10 +1,13 @@
 ---
+import Column from "../components/Column.astro";
 import Divider from "../components/Divider.astro";
+import LElement from "../components/LElement.astro";
+import Row from "../components/Row.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Layouts" pageKey="layouts">
-	<div class="lcars-column lcars-u-7">
+	<Column u={7}>
 		<h1>Layouts</h1>
 
 		<Divider color="dodger-blue" />
@@ -148,71 +151,69 @@ import Layout from "../layouts/Layout.astro";
 				</li>
 			</ul>
 		</p>
-		<p>
-			<div class="lcars-row">
-				<!--Rows of columns work easily -->
-				<div class="lcars-column lcars-u-1">
-					<div class="lcars-element">U-1</div>
-				</div>
-				<div class="lcars-column lcars-u-1">
-					<div class="lcars-element">U-1</div>
-				</div>
-				<div class="lcars-column lcars-u-1">
-					<div class="lcars-element">U-1</div>
-				</div>
-				<div class="lcars-column lcars-u-1">
-					<div class="lcars-element">U-1</div>
-				</div>
-			</div>
-			<div class="lcars-row">
-				<!--Default unit multiple, if no class is specified, is 1-->
-				<div class="lcars-column lcars-u-2">
-					<div class="lcars-element">U-1</div>
-				</div>
-				<div class="lcars-column lcars-u-2">
-					<div class="lcars-element lcars-u-2">U-2</div>
-				</div>
-			</div>
-			<div class="lcars-row">
-				<div class="lcars-column lcars-u-3">
-					<div class="lcars-element lcars-u-3">U-3</div>
-				</div>
-				<div class="lcars-column lcars-u-1">
-					<div class="lcars-element lcars-u-1">U-1</div>
-				</div>
-			</div>
-			<div class="lcars-row">
-				<div class="lcars-column lcars-u-4">
-					<div class="lcars-element lcars-u-4">U-4</div>
-				</div>
-			</div>
-		</p>
+		<Row>
+			<!--Rows of columns work easily -->
+			<Column>
+				<LElement>U-1</LElement>
+			</Column>
+			<Column>
+				<LElement>U-1</LElement>
+			</Column>
+			<Column>
+				<LElement>U-1</LElement>
+			</Column>
+			<Column>
+				<LElement>U-1</LElement>
+			</Column>
+		</Row>
+		<Row>
+			<!--Default unit multiple, if no class is specified, is 1-->
+			<Column u={2}>
+				<LElement>U-1</LElement>
+			</Column>
+			<Column u={2}>
+				<LElement u={2}>U-2</LElement>
+			</Column>
+		</Row>
+		<Row>
+			<Column u={3}>
+				<LElement u={3}>U-3</LElement>
+			</Column>
+			<Column u={1}>
+				<LElement u={1}>U-1</LElement>
+			</Column>
+		</Row>
+		<Row>
+			<Column u={4}>
+				<LElement u={4}>U-4</LElement>
+			</Column>
+		</Row>
 
-		<div class="lcars-column lcars-u-2">
+		<Column u={2}>
 			<!--However, columns of rows might not behave the way you would expect-->
-			<div class="lcars-row lcars-u-1">
-				<div class="lcars-element lcars-u-1">U-1</div>
-			</div>
-			<div class="lcars-row lcars-u-1">
-				<div class="lcars-element lcars-u-1">U-1</div>
-			</div>
-		</div>
-		<div class="lcars-column lcars-u-2">
-			<div class="lcars-row">
-				<div class="lcars-element lcars-u-1">U-1</div>
-			</div>
-			<div class="lcars-row">
-				<div class="lcars-element lcars-u-1">U-1</div>
-			</div>
-		</div>
-		<div class="lcars-column">
+			<Row u={1}>
+				<LElement u={1}>U-1</LElement>
+			</Row>
+			<Row u={1}>
+				<LElement u={1}>U-1</LElement>
+			</Row>
+		</Column>
+		<Column u={2}>
+			<Row>
+				<LElement u={1}>U-1</LElement>
+			</Row>
+			<Row>
+				<LElement u={1}>U-1</LElement>
+			</Row>
+		</Column>
+		<Column>
 			<!-- If grid size specification doesn't work as you expect, try moving the class deeper down-->
-			<div class="lcars-row">
-				<div class="lcars-element lcars-u-2">U-2</div>
-			</div>
-			<div class="lcars-row">
-				<div class="lcars-element lcars-u-4">U-4</div>
-			</div>
-		</div>
-	</div></Layout
+			<Row>
+				<LElement u={2}>U-2</LElement>
+			</Row>
+			<Row>
+				<LElement u={4}>U-4</LElement>
+			</Row>
+		</Column>
+	</Column></Layout
 >

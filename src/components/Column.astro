@@ -1,0 +1,11 @@
+---
+interface Props {
+    u?: number;
+}
+
+const { u } = Astro.props;
+---
+
+<div class:list={["lcars-column", u && `lcars-u-${u}`]}>
+    <slot />
+</div>

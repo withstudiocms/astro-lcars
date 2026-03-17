@@ -1,6 +1,9 @@
 ---
 import Divider from "../components/Divider.astro";
 import Layout from "../layouts/Layout.astro";
+import LElement from "../components/LElement.astro";
+import Row from "../components/Row.astro";
+import Column from "../components/Column.astro";
 ---
 
 <Layout title="Colors" pageKey="colors"
@@ -24,120 +27,52 @@ import Layout from "../layouts/Layout.astro";
 
         <a>These are the available colors:</a>
 
-        <p>
-            <div class="lcars-row">
-                <div class="lcars-column">
-                    <div class="lcars-element lcars-pale-canary-bg">
-                        <span class="text">pale-canary</span>
-                    </div>
-                    <div class="lcars-element lcars-golden-tanoi-bg">
-                        <span class="text">golden-tanoi</span>
-                    </div>
-                    <div class="lcars-element lcars-neon-carrot-bg">
-                        <span class="text">neon-carrot</span>
-                    </div>
-                    <div class="lcars-element lcars-eggplant-bg">
-                        <span class="text">eggplant</span>
-                    </div>
-                    <div class="lcars-element lcars-anakiwa-bg">
-                        <span class="text">anakiwa</span>
-                    </div>
-                    <div class="lcars-element lcars-mariner-bg">
-                        <span class="text">mariner</span>
-                    </div>
-                    <div class="lcars-element lcars-bahama-blue-bg">
-                        <span class="text">bahama-blue</span>
-                    </div>
-                    <div class="lcars-element lcars-red-alert-bg">
-                        <span class="text">red-alert</span>
-                    </div>
-                    <div class="lcars-element lcars-white-bg">
-                        <span class="text">white</span>
-                    </div>
-                </div>
+        <Row>
+            <Column>
+                <LElement color="pale-canary">pale-canary</LElement>
+                <LElement color="golden-tanoi">golden-tanoi</LElement>
+                <LElement color="neon-carrot">neon-carrot</LElement>
+                <LElement color="eggplant">eggplant</LElement>
+                <LElement color="anakiwa">anakiwa</LElement>
+                <LElement color="mariner">mariner</LElement>
+                <LElement color="bahama-blue">bahama-blue</LElement>
+                <LElement color="red-alert">red-alert</LElement>
+                <LElement color="white">white</LElement>
+            </Column>
 
-                <div class="lcars-column">
-                    <div class="lcars-element lcars-blue-bell-bg">
-                        <span class="text">blue-bell</span>
-                    </div>
-                    <div class="lcars-element lcars-melrose-bg">
-                        <span class="text">melrose</span>
-                    </div>
-                    <div class="lcars-element lcars-lilac-bg">
-                        <span class="text">lilac</span>
-                    </div>
-                    <div class="lcars-element lcars-hopbush-bg">
-                        <span class="text">hopbush</span>
-                    </div>
-                    <div class="lcars-element lcars-chestnut-rose-bg">
-                        <span class="text">chestnut-rose</span>
-                    </div>
-                    <div class="lcars-element lcars-orange-peel-bg">
-                        <span class="text">orange-peel</span>
-                    </div>
-                    <div class="lcars-element lcars-atomic-tangerine-bg">
-                        <span class="text">atomic-tangerine</span>
-                    </div>
-                    <div class="lcars-element lcars-gray-bg">
-                        <span class="text">gray</span>
-                    </div>
-                </div>
+            <Column>
+                <LElement color="blue-bell">blue-bell</LElement>
+                <LElement color="melrose">melrose</LElement>
+                <LElement color="lilac">lilac</LElement>
+                <LElement color="hopbush">hopbush</LElement>
+                <LElement color="chestnut-rose">chestnut-rose</LElement>
+                <LElement color="orange-peel">orange-peel</LElement>
+                <LElement color="atomic-tangerine">atomic-tangerine</LElement>
+                <LElement color="gray">gray</LElement>
+            </Column>
 
-                <div class="lcars-column">
-                    <div class="lcars-element lcars-danub-bg">
-                        <span class="text">danub</span>
-                    </div>
-                    <div class="lcars-element lcars-indigo-bg">
-                        <span class="text">indigo</span>
-                    </div>
-                    <div class="lcars-element lcars-lavender-purple-bg">
-                        <span class="text">lavender-purple</span>
-                    </div>
-                    <div class="lcars-element lcars-cosmic-bg">
-                        <span class="text">cosmic</span>
-                    </div>
-                    <div class="lcars-element lcars-red-damask-bg">
-                        <span class="text">red-damask</span>
-                    </div>
-                    <div class="lcars-element lcars-medium-carmine-bg">
-                        <span class="text">medium-carmine</span>
-                    </div>
-                    <div class="lcars-element lcars-bourbon-bg">
-                        <span class="text">bourbon</span>
-                    </div>
-                    <div class="lcars-element lcars-sandy-brown-bg">
-                        <span class="text">sandy-brown</span>
-                    </div>
-                </div>
+            <Column>
+                <LElement color="danub">danub</LElement>
+                <LElement color="indigo">indigo</LElement>
+                <LElement color="lavender-purple">lavender-purple</LElement>
+                <LElement color="cosmic">cosmic</LElement>
+                <LElement color="red-damask">red-damask</LElement>
+                <LElement color="medium-carmine">medium-carmine</LElement>
+                <LElement color="bourbon">bourbon</LElement>
+                <LElement color="sandy-brown">sandy-brown</LElement>
+            </Column>
 
-                <div class="lcars-column">
-                    <div class="lcars-element lcars-periwinkle-bg">
-                        <span class="text">periwinkle</span>
-                    </div>
-                    <div class="lcars-element lcars-dodger-blue-bg">
-                        <span class="text">dodger-blue</span>
-                    </div>
-                    <div class="lcars-element lcars-dodger-blue-alt-bg">
-                        <span class="text">dodger-blue-alt</span>
-                    </div>
-                    <div class="lcars-element lcars-blue-bg">
-                        <span class="text">blue</span>
-                    </div>
-                    <div class="lcars-element lcars-navy-blue-bg">
-                        <span class="text">navy-blue</span>
-                    </div>
-                    <div class="lcars-element lcars-husk-bg">
-                        <span class="text">husk</span>
-                    </div>
-                    <div class="lcars-element lcars-rust-bg">
-                        <span class="text">rust</span>
-                    </div>
-                    <div class="lcars-element lcars-tamarillo-bg">
-                        <span class="text">tamarillo</span>
-                    </div>
-                </div>
-            </div>
-        </p>
+            <Column>
+                <LElement color="periwinkle">periwinkle</LElement>
+                <LElement color="dodger-blue">dodger-blue</LElement>
+                <LElement color="dodger-blue-alt">dodger-blue-alt</LElement>
+                <LElement color="blue">blue</LElement>
+                <LElement color="navy-blue">navy-blue</LElement>
+                <LElement color="husk">husk</LElement>
+                <LElement color="rust">rust</LElement>
+                <LElement color="tamarillo">tamarillo</LElement>
+            </Column>
+        </Row>
 
         <!-- HYPERLINKS -->
         <h2 id="hyperlinks_section">Hyperlinks</h2>

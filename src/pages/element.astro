@@ -1,10 +1,14 @@
 ---
 import Divider from "../components/Divider.astro";
 import Layout from "../layouts/Layout.astro";
+import LElement from "../components/LElement.astro";
+import Column from "../components/Column.astro";
+import Row from "../components/Row.astro";
+import Bracket from "../components/Bracket.astro";
 ---
 
 <Layout title="Element" pageKey="element"
-    ><div class="lcars-column lcars-u-7">
+    ><Column u={7}>
         <h1 id="element_section">Element</h1>
 
         <Divider color="dodger-blue" />
@@ -82,38 +86,30 @@ import Layout from "../layouts/Layout.astro";
 
         <h3>Example</h3>
 
-        <p>
-            <div class="lcars-column">
-                <div class="lcars-row">
-                    <div class="lcars-column">
-                        <div class="lcars-row">
-                            <div class="lcars-element"></div>
-                            <div class="lcars-element button">Button</div>
-                            <div class="lcars-element lcars-red-alert-bg">
-                                Coloured
-                            </div>
-                        </div>
-                        <div class="lcars-row">
-                            <div class="lcars-element left-rounded">
-                                left round
-                            </div>
-                            <div class="lcars-element right-rounded">
-                                right round
-                            </div>
-                            <div class="lcars-element rounded">round</div>
-                        </div>
-                    </div>
-                    <div class="lcars-element lcars-u-1-2">tall</div>
-                </div>
-                <div class="lcars-row">
-                    <div class="lcars-element lcars-u-2-1">double</div>
-                    <div class="lcars-element lcars-u-2-1 lcars-lilac-bg">
-                        <div>with</div>
-                        <div class="lcars-element-addition">addition</div>
-                    </div>
-                </div>
-            </div>
-        </p>
+        <Column>
+            <Row>
+                <Column>
+                    <Row>
+                        <LElement />
+                        <LElement button>Button</LElement>
+                        <LElement color="red-alert">Coloured</LElement>
+                    </Row>
+                    <Row>
+                        <LElement leftRounded>left round</LElement>
+                        <LElement rightRounded>right round</LElement>
+                        <LElement rounded>round</LElement>
+                    </Row>
+                </Column>
+                <LElement u={"1-2"}>tall</LElement>
+            </Row>
+            <Row>
+                <LElement u={"2-1"}>double</LElement>
+                <LElement u={"2-1"} color="lilac" addition>
+                    with
+                    <span slot="addition">addition</span>
+                </LElement>
+            </Row>
+        </Column>
 
         <h2 id="elbow_section">Elbow</h2>
 
@@ -153,48 +149,42 @@ import Layout from "../layouts/Layout.astro";
 
         <h3>Example</h3>
 
-        <p>
-            <div class="lcars-row">
-                <div class="lcars-elbow right-top lcars-golden-tanoi-bg">
-                    <a>right-top</a>
-                </div>
-                <div class="lcars-bar double-spacer"></div>
-                <div class="lcars-elbow left-top lcars-golden-tanoi-bg">
-                    <a>left-top</a>
-                </div>
-                <div class="lcars-bar spacer"></div>
-                <div
-                    class="lcars-bar horizontal lcars-blue-bell-bg bottom both-divider"
-                >
-                </div>
-                <div class="lcars-bar spacer"></div>
-                <div
-                    class="lcars-bar horizontal lcars-lavender-purple-bg right-end bottom"
-                >
-                </div>
+        <Row>
+            <div class="lcars-elbow right-top lcars-golden-tanoi-bg">
+                <a>right-top</a>
             </div>
-        </p>
-        <p>
-            <div class="lcars-row">
-                <div class="lcars-elbow right-bottom lcars-golden-tanoi-bg">
-                    <a>right-bottom</a>
-                </div>
-                <div class="lcars-bar double-spacer"></div>
-                <div class="lcars-elbow left-bottom lcars-golden-tanoi-bg">
-                    <a>left-bottom</a>
-                </div>
-                <div class="lcars-bar spacer"></div>
-                <div
-                    class="lcars-bar horizontal lcars-dodger-blue-bg right-divider"
-                >
-                </div>
-                <div class="lcars-bar spacer"></div>
-                <div
-                    class="lcars-bar horizontal lcars-golden-tanoi-bg right-end"
-                >
-                </div>
+            <div class="lcars-bar double-spacer"></div>
+            <div class="lcars-elbow left-top lcars-golden-tanoi-bg">
+                <a>left-top</a>
             </div>
-        </p>
+            <div class="lcars-bar spacer"></div>
+            <div
+                class="lcars-bar horizontal lcars-blue-bell-bg bottom both-divider"
+            >
+            </div>
+            <div class="lcars-bar spacer"></div>
+            <div
+                class="lcars-bar horizontal lcars-lavender-purple-bg right-end bottom"
+            >
+            </div>
+        </Row>
+        <Row>
+            <div class="lcars-elbow right-bottom lcars-golden-tanoi-bg">
+                <a>right-bottom</a>
+            </div>
+            <div class="lcars-bar double-spacer"></div>
+            <div class="lcars-elbow left-bottom lcars-golden-tanoi-bg">
+                <a>left-bottom</a>
+            </div>
+            <div class="lcars-bar spacer"></div>
+            <div
+                class="lcars-bar horizontal lcars-dodger-blue-bg right-divider"
+            >
+            </div>
+            <div class="lcars-bar spacer"></div>
+            <div class="lcars-bar horizontal lcars-golden-tanoi-bg right-end">
+            </div>
+        </Row>
 
         <h2 id="brackets_section">Brackets</h2>
 
@@ -231,42 +221,40 @@ import Layout from "../layouts/Layout.astro";
             </ul>
         </p>
         <h3>Example</h3>
-        <p>
-            <div class="lcars-row">
-                <div class="lcars-bracket left"></div>
-                <div class="lcars-column">
-                    <div class="lcars-element"></div>
-                    <div class="lcars-element"></div>
-                </div>
-                <div class="lcars-bracket right"></div>
-            </div>
+        <Row>
+            <Bracket position="left" />
+            <Column>
+                <LElement />
+                <LElement />
+            </Column>
+            <Bracket position="right" />
+        </Row>
 
-            <div class="lcars-row">
-                <div class="lcars-bracket left hollow"></div>
-                <div class="lcars-column">
-                    <div class="lcars-element"></div>
-                    <div class="lcars-element"></div>
-                </div>
-                <div class="lcars-bracket right hollow"></div>
-            </div>
+        <Row>
+            <Bracket position="left" hollow />
+            <Column>
+                <LElement />
+                <LElement />
+            </Column>
+            <Bracket position="right" hollow />
+        </Row>
 
-            <div class="lcars-column lcars-u-2">
-                <div class="lcars-bracket top"></div>
-                <div class="lcars-row">
-                    <div class="lcars-element"></div>
-                    <div class="lcars-element"></div>
-                </div>
-                <div class="lcars-bracket bottom"></div>
-            </div>
+        <Column u={2}>
+            <Bracket position="top" />
+            <Row>
+                <LElement />
+                <LElement />
+            </Row>
+            <Bracket position="bottom" />
+        </Column>
 
-            <div class="lcars-column lcars-u-2">
-                <div class="lcars-bracket top hollow"></div>
-                <div class="lcars-row">
-                    <div class="lcars-element"></div>
-                    <div class="lcars-element"></div>
-                </div>
-                <div class="lcars-bracket bottom hollow"></div>
-            </div>
-        </p>
-    </div></Layout
+        <Column u={2}>
+            <Bracket position="top" hollow />
+            <Row>
+                <LElement />
+                <LElement />
+            </Row>
+            <Bracket position="bottom" hollow />
+        </Column>
+    </Column></Layout
 >
