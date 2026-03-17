@@ -63,6 +63,15 @@
                 "#container div.lcars-element.button, div.lcars-app-container div.lcars-element.button",
             );
             for (var button of button_list) {
+                if (button.classList.contains("nav")) {
+                    console.log(
+                        "Skipping audio-enabling nav button " +
+                            button.id +
+                            " " +
+                            button.innerText,
+                    );
+                    continue;
+                }
                 console.log(
                     "Audio-enabling container-contained button " +
                         button.id +
