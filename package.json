@@ -2,6 +2,12 @@
   "name": "astro-lcars",
   "type": "module",
   "version": "0.0.1",
+  "license": "MIT",
+  "description": "A Star Trek LCARS themed Astro website.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Adammatthiesen/astro-lcars.git"
+  },
   "engines": {
     "node": ">=22.12.0"
   },

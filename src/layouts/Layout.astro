@@ -28,12 +28,9 @@ const pageTitle = title ? `${title} | ${siteTitle}` : siteTitle;
         <Font cssVariable="--font-lcarsgtj3" preload />
     </head>
     <body>
-        <div class="lcars-app-container">
-            <LCARSFrame siteTitle={siteTitle} pageKey={pageKey} />
-            <div id="container">
-                <slot />
-            </div>
-        </div>
+        <LCARSFrame siteTitle={siteTitle} pageKey={pageKey}>
+            <slot />
+        </LCARSFrame>
         <LCARSAudio />
         <LCARSColorFix />
     </body>

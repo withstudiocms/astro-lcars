@@ -59,6 +59,8 @@ create-text-colors(colors)
 	for c, v in colors
 		.{prefix}{c}-bg .text
 			--bg-color v
+		.{prefix}{c}-bg:hover .text
+			--hover-color default-color-highlight
 
 // LCARS colors (background-color)
 create-colors('background-color', 'bg', colors)
