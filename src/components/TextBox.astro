@@ -1,0 +1,29 @@
+---
+interface Props {
+    textSize?: "big" | "large" | "huge";
+    position?:
+        | "right"
+        | "bottom"
+        | "centered"
+        | "full-centered"
+        | "centered-right"
+        | "bottom-centered"
+        | "bottom-right";
+    blink?: boolean;
+    u?: number;
+}
+
+const { position, textSize, blink, u } = Astro.props;
+---
+
+<div
+    class:list={[
+        "lcars-text-box",
+        position,
+        textSize,
+        blink && "blink",
+        u && `lcars-u-${u}`,
+    ]}
+>
+    <slot />
+</div>

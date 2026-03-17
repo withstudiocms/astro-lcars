@@ -2,6 +2,7 @@
 import Column from "../components/Column.astro";
 import Divider from "../components/Divider.astro";
 import Layout from "../layouts/Layout.astro";
+import LTextBox from "../components/TextBox.astro";
 ---
 
 <Layout title="Text Box" pageKey="text-box"
@@ -30,12 +31,6 @@ import Layout from "../layouts/Layout.astro";
                     <span
                         ><pre class="lcars-rust-color">large</pre>: font-size
                         200%</span
-                    >
-                </li>
-                <li>
-                    <span
-                        ><pre class="lcars-rust-color">huge</pre>: font-size
-                        400%</span
                     >
                 </li>
                 <li>
@@ -95,9 +90,9 @@ import Layout from "../layouts/Layout.astro";
             </ul>
         </p>
         <h3>Example</h3>
-        <div class="lcars-text-box right lcars-u-6">COMMS STATUS NOMINAL</div>
-        <div class="lcars-text-box large centered lcars-u-6 blink">
-            INCOMING TRANSMISSION
-        </div>
+        <LTextBox position="right" u={6}>COMMS STATUS NOMINAL</LTextBox>
+        <LTextBox textSize="large" position="centered" u={6} blink
+            >INCOMING TRANSMISSION</LTextBox
+        >
     </Column></Layout
 >
