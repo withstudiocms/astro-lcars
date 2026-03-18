@@ -1,6 +1,8 @@
 ---
+import { getRandomLCARSLoadingMessage } from "../lib/random";
 import { NAV } from "../nav.js";
 import LElement from "./LElement.astro";
+import TextBox from "./TextBox.astro";
 
 interface Props {
     siteTitle: string;
@@ -83,7 +85,24 @@ const { siteTitle, pageKey } = Astro.props;
         <div class="lcars-bar horizontal right-end left-divider bottom"></div>
     </div>
 
+    <div id="loading-screen" class="overlay">
+        <TextBox textSize="huge" position="full-centered" u={8} blink
+            >{getRandomLCARSLoadingMessage()}</TextBox
+        >
+    </div>
+
     <div id="container">
         <slot />
     </div>
 </div>
+
+<script>
+    function ready() {
+        setTimeout(() => {
+            const app = document.querySelector(".lcars-app-container");
+            app?.classList.add("is-ready");
+        }, 250);
+    }
+
+    document.addEventListener("DOMContentLoaded", ready);
+</script>
