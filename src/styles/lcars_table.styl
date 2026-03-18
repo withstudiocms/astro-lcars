@@ -22,12 +22,28 @@ table.standard-header tbody:before
   /* only works without border-collapse, note */
   line-height .1em 
   content "\00a0"  /*i.e., &nbsp;*/
-  color black  /* bacground color */
+  color black  /* background color */
   display block 
 
-
-//TODO: maybe something for captions and/or tfoot?
-
+table.lcars-table.with-caption
+  &.caption-left caption
+    margin-right -0.5rem
+    margin-bottom 0.5rem
+    text-align left
+    border-left 0.8em solid
+    border-right 32rem solid
+    border-radius 0.5em
+    padding-left 0.33em
+    padding-bottom -0.15em
+  &.caption-right caption
+    margin-left -0.5rem
+    margin-bottom 0.5rem
+    text-align right
+    border-right 0.8em solid
+    border-left 32rem solid
+    border-radius 0.5em
+    padding-right 0.33em
+    padding-bottom -0.15em
 
 animationDuration   = 8s
 animationFramecount = 10

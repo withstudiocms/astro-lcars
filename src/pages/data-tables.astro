@@ -1,5 +1,6 @@
 ---
 import Column from "../components/Column.astro";
+import DataTable from "../components/DataTable.astro";
 import Divider from "../components/Divider.astro";
 import Layout from "../layouts/Layout.astro";
 ---
@@ -44,7 +45,7 @@ import Layout from "../layouts/Layout.astro";
         <h3>Example</h3>
 
         <p>
-            <table class="lcars-table lcars-periwinkle-color standard-header">
+            <DataTable color="periwinkle" standardHeader>
                 <!-- Note that for the standard-header class to function completely, 
 	     					the thead/tbody pairing is *required*. 
 					-->
@@ -56,30 +57,42 @@ import Layout from "../layouts/Layout.astro";
                     <tr><td>B1</td><td>B2</td><td>B3</td></tr>
                     <tr><td>C1</td><td>C2</td><td>C3</td></tr>
                 </tbody>
-            </table>
+            </DataTable>
         </p>
         <p>
-            <table class="lcars-table scanning-fast lcars-husk-color">
+            <DataTable scanningFast color="husk">
                 <tr><td>A1</td><td>A2</td><td>A3</td></tr>
                 <tr><td>B1</td><td>B2</td><td>B3</td></tr>
                 <tr><td>C1</td><td>C2</td><td>C3</td></tr>
                 <tr><td>D1</td><td>D2</td><td>D3</td></tr>
                 <tr><td>E1</td><td>E2</td><td>E3</td></tr>
                 <tr><td>F1</td><td>F2</td><td>F3</td></tr>
-            </table>
+            </DataTable>
         </p>
         <p>
-            <table
-                class="lcars-table scanning lcars-chestnut-rose-color localCustomFunWithCaptions"
+            <DataTable
+                scanning
+                color="chestnut-rose"
+                caption="TABLE 3"
+                captionPosition="right"
             >
-                <caption>TABLE 3</caption>
                 <tr><td>ALPHA1</td><td>ALPHA2</td><td>ALPHA3</td></tr>
                 <tr><td>BETA01</td><td>BET0A2</td><td>BETA03</td></tr>
                 <tr><td>GAMMA1</td><td>GAMMA2</td><td>GAMMA3</td></tr>
                 <tr><td>DELTA1</td><td>DELTA2</td><td>DELTA3</td></tr>
                 <tr><td>EPSLN1</td><td>EPSLN2</td><td>EPSLN3</td></tr>
                 <tr><td>ZETA01</td><td>ZETA02</td><td>ZETA03</td></tr>
-            </table>
+            </DataTable>
+        </p>
+        <p>
+            <DataTable color="bourbon" caption="TABLE 4" captionPosition="left">
+                <tr><td>ALPHA1</td><td>ALPHA2</td><td>ALPHA3</td></tr>
+                <tr><td>BETA01</td><td>BET0A2</td><td>BETA03</td></tr>
+                <tr><td>GAMMA1</td><td>GAMMA2</td><td>GAMMA3</td></tr>
+                <tr><td>DELTA1</td><td>DELTA2</td><td>DELTA3</td></tr>
+                <tr><td>EPSLN1</td><td>EPSLN2</td><td>EPSLN3</td></tr>
+                <tr><td>ZETA01</td><td>ZETA02</td><td>ZETA03</td></tr>
+            </DataTable>
         </p>
     </Column></Layout
 >

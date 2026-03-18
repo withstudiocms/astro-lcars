@@ -1,0 +1,36 @@
+---
+import type { LcarsColorway } from "../lib/colors";
+
+interface Props {
+    color?: LcarsColorway;
+    scanning?: boolean;
+    scanningFast?: boolean;
+    caption?: string;
+    captionPosition?: "left" | "right";
+    standardHeader?: boolean;
+}
+
+const {
+    color,
+    scanning,
+    scanningFast,
+    caption,
+    captionPosition,
+    standardHeader,
+} = Astro.props;
+---
+
+<table
+    class:list={[
+        "lcars-table",
+        color && `lcars-${color}-color`,
+        scanning && "scanning",
+        scanningFast && "scanning-fast",
+        caption && "with-caption",
+        captionPosition === "right" ? "caption-right" : "caption-left",
+        standardHeader && "standard-header",
+    ]}
+>
+    {caption && <caption>{caption}</caption>}
+    <slot />
+</table>

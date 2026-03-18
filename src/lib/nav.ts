@@ -1,10 +1,9 @@
-import type { NavData } from "./lib/types";
+import type { NavData } from "./types";
 
 export const NAV: NavData[] = [
     { text: "Home", href: "/", key: "home" },
     { text: "Layouts", href: "/layouts", key: "layouts", color: "pale-canary" },
     { text: "Colors", href: "/colors", key: "colors" },
-    { text: "Bar", href: "/bar", key: "bar", color: "pale-canary" },
     { text: "Text Box", href: "/text-box", key: "text-box" },
     { text: "Element", href: "/element", key: "element", color: "pale-canary" },
     { text: "Inputs", href: "/inputs", key: "inputs" },

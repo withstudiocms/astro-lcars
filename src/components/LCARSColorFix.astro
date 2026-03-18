@@ -27,3 +27,15 @@
         </filter>
     </defs>
 </svg>
+
+<style is:global>
+    .lcars-element .text {
+        color: var(--bg-color);
+        filter: url(#bwFilter);
+    }
+
+    .lcars-element.button:hover .text {
+        color: var(--hover-color);
+        filter: url(#bwFilter);
+    }
+</style>
