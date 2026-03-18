@@ -209,15 +209,9 @@
         },
     };
 
-    //=\\ Standard Wire-up
+    // Standard Wire-up
     var audDummy = document
         .getElementById("audDummy")
         .appendChild(document.createElement("audio"));
     lcarsAudio.initialize(audDummy);
-
-    //All "booted" up notification.
-    //Many browsers won't play this next sound because the user hasn't "blessed" the action with a UI click yet.
-    document.addEventListener("DOMContentLoaded", function () {
-        lcarsAudio.Ready();
-    });
 </script>

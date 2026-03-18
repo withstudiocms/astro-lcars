@@ -1,6 +1,6 @@
 ---
 import { getRandomLCARSLoadingMessage } from "../lib/random";
-import { NAV } from "../nav.js";
+import { NAV } from "../lib/nav";
 import LElement from "./LElement.astro";
 import TextBox from "./TextBox.astro";
 
@@ -96,11 +96,12 @@ const { siteTitle, pageKey } = Astro.props;
     </div>
 </div>
 
-<script>
+<script is:inline>
     function ready() {
         setTimeout(() => {
             const app = document.querySelector(".lcars-app-container");
             app?.classList.add("is-ready");
+            lcarsAudio.Ready();
         }, 250);
     }
 
