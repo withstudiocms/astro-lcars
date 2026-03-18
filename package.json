@@ -19,6 +19,11 @@
   },
   "dependencies": {
     "astro": "^6.0.5",
+    "astro-og-canvas": "^0.10.1",
+    "canvaskit-wasm": "^0.40.0",
     "stylus": "^0.64.0"
+  },
+  "devDependencies": {
+    "@types/node": "^25.5.0"
   }
 }

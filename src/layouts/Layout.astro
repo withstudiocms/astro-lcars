@@ -9,9 +9,15 @@ interface Props {
     siteTitle?: string;
     title?: string;
     pageKey: string;
+    ogKey?: string;
 }
 
-const { siteTitle = "Astro LCARS", title, pageKey } = Astro.props;
+const canonicalUrl = new URL(Astro.site || "http://localhost:4321");
+
+const { siteTitle = "Astro LCARS", title, pageKey, ogKey } = Astro.props;
+
+const ogImageUrl = new URL(`/open-graph/${ogKey || "index"}.png`, canonicalUrl)
+    .href;
 
 const pageTitle = title ? `${title} | ${siteTitle}` : siteTitle;
 ---
@@ -24,6 +30,14 @@ const pageTitle = title ? `${title} | ${siteTitle}` : siteTitle;
         <meta name="viewport" content="width=device-width" />
         <meta name="generator" content={Astro.generator} />
         <title>{pageTitle}</title>
+        <meta property="og:title" content={pageTitle} />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={canonicalUrl.href} />
+        <meta property="og:image" content={ogImageUrl} />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={pageTitle} />
+        <meta name="twitter:image" content={ogImageUrl} />
+        <link rel="canonical" href={canonicalUrl.href} />
         <Font cssVariable="--font-lcarsgtj3" preload />
     </head>
     <body>

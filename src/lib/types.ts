@@ -8,4 +8,11 @@ export type NavData = {
     href: string;
     key: string;
     color?: LcarsColorway;
-}
+};
+
+export type OGPageConfig = {
+    [path: string]: {
+        title: string;
+        description: string;
+    };
+};

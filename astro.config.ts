@@ -1,8 +1,19 @@
 // @ts-check
 import { defineConfig, fontProviders } from 'astro/config';
 
+const site = process.env.NODE_ENV === 'production'
+    ? process.env.DOKPLOY_DEPLOY_URL || 'https://astro-lcars.matthiesen.dev'
+    : 'http://localhost:4321';
+
 // https://astro.build/config
 export default defineConfig({
+    site,
+    security: {
+        allowedDomains: [
+            { hostname: '*.matthiesen.dev' },
+            ...(process.env.NODE_ENV === 'production' ? [] : [{ hostname: 'localhost' }])
+        ]
+    },
     fonts: [{
         // https://gtjlcars.de/LCARSindex/LCARSFONTS.htm
         provider: fontProviders.local(),
