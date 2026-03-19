@@ -1,6 +1,6 @@
 # Astro LCARS Theme
 
-This project is a reimagined LCARS implementation using our `@withstudiocms/lcars-stylus` Stylus design kit. Want to create a website or web interfaces that are inspired by your favorite Star Trek LCARS screens? This makes it easy!
+This project is a reimagined LCARS implementation using our [`@withstudiocms/lcars-stylus`](https://github.com/withstudiocms/lcars-stylus/) Stylus design kit. Want to create a website or web interfaces that are inspired by your favorite Star Trek LCARS screens? This makes it easy!
 
 ## Tech Stack
 
