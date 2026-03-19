@@ -2,6 +2,9 @@ import type { LcarsColors } from "./colors";
 import { selectRandom } from "./random";
 import type { NavData } from "./types";
 
+/**
+ * The URL of the source code repository for the LCARS-themed website, pointing to the GitHub repository "withstudiocms/astro-lcars" where the project's source code is hosted, allowing users to access the codebase, contribute to the project, or explore the implementation details of the LCARS design system.
+ */
 export const SOURCE_URL = "https://github.com/withstudiocms/astro-lcars";
 
 /**
