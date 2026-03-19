@@ -1,5 +1,9 @@
 ---
-import { NAV, getRandomLCARSLoadingMessage } from "../../lib/consts";
+import {
+    NAV,
+    SOURCE_URL,
+    getRandomLCARSLoadingMessage,
+} from "../../lib/consts";
 import LElement from "../LElement.astro";
 import TextBox from "../TextBox.astro";
 
@@ -56,7 +60,7 @@ const { siteTitle, pageKey } = Astro.props;
         <div class="lcars-bar spacer"></div>
 
         {/* Link to source code on GitHub */}
-        <a href="https://github.com/Adammatthiesen/astro-lcars" target="_blank">
+        <a href={SOURCE_URL} target="_blank">
             <LElement button classList="nav" color="atomic-tangerine">
                 Source Code
             </LElement>

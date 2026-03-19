@@ -2,6 +2,8 @@ import type { LcarsColors } from "./colors";
 import { selectRandom } from "./random";
 import type { NavData } from "./types";
 
+export const SOURCE_URL = "https://github.com/withstudiocms/astro-lcars";
+
 /**
  * Navigation data for the LCARS-themed website, defined as an array of NavData objects that represent the different navigation items, including their text labels, hyperlink references, unique keys for identification, and optional colors from the LCARS color palette to provide visual distinction and thematic consistency throughout the design.
  */
