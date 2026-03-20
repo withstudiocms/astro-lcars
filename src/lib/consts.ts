@@ -1,4 +1,4 @@
-import type { NavData } from "./types";
+import type { NavigationItem } from "@withstudiocms/lcars-stylus/astro/types.ts";
 
 /**
  * The URL of the source code repository for the LCARS-themed website, pointing to the GitHub repository "withstudiocms/astro-lcars" where the project's source code is hosted, allowing users to access the codebase, contribute to the project, or explore the implementation details of the LCARS design system.
@@ -28,7 +28,7 @@ export const LICENSE = {
 /**
  * Navigation data for the LCARS-themed website, defined as an array of NavData objects that represent the different navigation items, including their text labels, hyperlink references, unique keys for identification, and optional colors from the LCARS color palette to provide visual distinction and thematic consistency throughout the design.
  */
-export const NAV: NavData[] = [
+export const NAV: NavigationItem[] = [
     { text: "Home", href: "/", key: "home" },
     { text: "Layouts", href: "/layouts", key: "layouts", color: "pale-canary" },
     { text: "Colors", href: "/colors", key: "colors" },

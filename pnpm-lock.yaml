@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@withstudiocms/lcars-stylus':
-        specifier: https://pkg.pr.new/@withstudiocms/lcars-stylus@8d1b97c
-        version: https://pkg.pr.new/@withstudiocms/lcars-stylus@8d1b97c(astro@6.0.5(@types/node@25.5.0)(rollup@4.59.0)(stylus@0.64.0))(stylus@0.64.0)
+        specifier: https://pkg.pr.new/@withstudiocms/lcars-stylus@2a7b03a
+        version: https://pkg.pr.new/@withstudiocms/lcars-stylus@2a7b03a(astro@6.0.5(@types/node@25.5.0)(rollup@4.59.0)(stylus@0.64.0))(stylus@0.64.0)
       astro:
         specifier: ^6.0.5
         version: 6.0.5(@types/node@25.5.0)(rollup@4.59.0)(stylus@0.64.0)
@@ -582,8 +582,8 @@ packages:
   '@webgpu/types@0.1.21':
     resolution: {integrity: sha512-pUrWq3V5PiSGFLeLxoGqReTZmiiXwY3jRkIG5sLLKjyqNxrwm/04b4nw7LSmGWJcKk59XOM/YRTUwOzo4MMlow==}
 
-  '@withstudiocms/lcars-stylus@https://pkg.pr.new/@withstudiocms/lcars-stylus@8d1b97c':
-    resolution: {tarball: https://pkg.pr.new/@withstudiocms/lcars-stylus@8d1b97c}
+  '@withstudiocms/lcars-stylus@https://pkg.pr.new/@withstudiocms/lcars-stylus@2a7b03a':
+    resolution: {tarball: https://pkg.pr.new/@withstudiocms/lcars-stylus@2a7b03a}
     version: 1.0.1
     peerDependencies:
       astro: ^6.0.0
@@ -2007,7 +2007,7 @@ snapshots:
 
   '@webgpu/types@0.1.21': {}
 
-  '@withstudiocms/lcars-stylus@https://pkg.pr.new/@withstudiocms/lcars-stylus@8d1b97c(astro@6.0.5(@types/node@25.5.0)(rollup@4.59.0)(stylus@0.64.0))(stylus@0.64.0)':
+  '@withstudiocms/lcars-stylus@https://pkg.pr.new/@withstudiocms/lcars-stylus@2a7b03a(astro@6.0.5(@types/node@25.5.0)(rollup@4.59.0)(stylus@0.64.0))(stylus@0.64.0)':
     dependencies:
       stylus: 0.64.0
     optionalDependencies:
