@@ -1,4 +1,4 @@
-import type { LcarsColorway } from "./colors";
+import type { LcarsColorway } from "@withstudiocms/lcars-stylus/astro/types.ts";
 
 /**
  * Represents a navigation item in the LCARS-themed website. Each item has a text label, a hyperlink reference, a unique key for identification, and a color from the LCARS color palette.

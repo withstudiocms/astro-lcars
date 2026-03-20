@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@withstudiocms/lcars-stylus':
-        specifier: ^1.0.1
-        version: 1.0.1(stylus@0.64.0)
+        specifier: https://pkg.pr.new/@withstudiocms/lcars-stylus@8d1b97c
+        version: https://pkg.pr.new/@withstudiocms/lcars-stylus@8d1b97c(astro@6.0.5(@types/node@25.5.0)(rollup@4.59.0)(stylus@0.64.0))(stylus@0.64.0)
       astro:
         specifier: ^6.0.5
         version: 6.0.5(@types/node@25.5.0)(rollup@4.59.0)(stylus@0.64.0)
@@ -582,10 +582,15 @@ packages:
   '@webgpu/types@0.1.21':
     resolution: {integrity: sha512-pUrWq3V5PiSGFLeLxoGqReTZmiiXwY3jRkIG5sLLKjyqNxrwm/04b4nw7LSmGWJcKk59XOM/YRTUwOzo4MMlow==}
 
-  '@withstudiocms/lcars-stylus@1.0.1':
-    resolution: {integrity: sha512-Mj7ndq7r6ys/V1l7sBEqG5daEjelLPAuH5+C+KxreeiFdJRRqJEYgUvvujTAvcYHQsSVeAsDFM0OM3jNPVAUHQ==}
+  '@withstudiocms/lcars-stylus@https://pkg.pr.new/@withstudiocms/lcars-stylus@8d1b97c':
+    resolution: {tarball: https://pkg.pr.new/@withstudiocms/lcars-stylus@8d1b97c}
+    version: 1.0.1
     peerDependencies:
+      astro: ^6.0.0
       stylus: '*'
+    peerDependenciesMeta:
+      astro:
+        optional: true
 
   ansi-regex@5.0.1:
     resolution: {integrity: sha512-quJQXlTSUGL2LH9SUXo8VwsY4soanhgo6LNSm84E1LBcE8s3O0wpdiRzyR9z/ZZJMlMWv37qOOb9pdJlMUEKFQ==}
@@ -2002,9 +2007,11 @@ snapshots:
 
   '@webgpu/types@0.1.21': {}
 
-  '@withstudiocms/lcars-stylus@1.0.1(stylus@0.64.0)':
+  '@withstudiocms/lcars-stylus@https://pkg.pr.new/@withstudiocms/lcars-stylus@8d1b97c(astro@6.0.5(@types/node@25.5.0)(rollup@4.59.0)(stylus@0.64.0))(stylus@0.64.0)':
     dependencies:
       stylus: 0.64.0
+    optionalDependencies:
+      astro: 6.0.5(@types/node@25.5.0)(rollup@4.59.0)(stylus@0.64.0)
 
   ansi-regex@5.0.1: {}
 

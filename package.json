@@ -18,7 +18,7 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@withstudiocms/lcars-stylus": "^1.0.1",
+    "@withstudiocms/lcars-stylus": "https://pkg.pr.new/@withstudiocms/lcars-stylus@8d1b97c",
     "astro": "^6.0.5",
     "astro-og-canvas": "^0.10.1",
     "canvaskit-wasm": "^0.40.0",

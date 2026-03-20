@@ -1,9 +1,9 @@
 ---
 import "@withstudiocms/lcars-stylus";
+import Basic from "@withstudiocms/lcars-stylus/astro/layouts/Basic.astro";
 import { Font } from "astro:assets";
-import LCARSAudio from "../components/layout/LCARSAudio.astro";
-import LCARSFrame from "../components/layout/LCARSFrame.astro";
-import LCARSColorFix from "../components/layout/LCARSColorFix.astro";
+import { LICENSE, NAV } from "../lib/consts";
+import { SOURCE_URL } from "../lib/consts";
 
 interface Props {
     siteTitle?: string;
@@ -41,10 +41,17 @@ const pageTitle = title ? `${title} | ${siteTitle}` : siteTitle;
         <Font cssVariable="--font-lcarsgtj3" preload />
     </head>
     <body>
-        <LCARSFrame siteTitle={siteTitle} pageKey={pageKey}>
+        <Basic
+            {siteTitle}
+            navigation={NAV}
+            key={pageKey}
+            copyright={LICENSE}
+            externalLink={{
+                href: SOURCE_URL,
+                text: "Source Code",
+            }}
+        >
             <slot />
-        </LCARSFrame>
-        <LCARSAudio />
-        <LCARSColorFix />
+        </Basic>
     </body>
 </html>
