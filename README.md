@@ -1,43 +1,45 @@
-# Astro Starter Kit: Minimal
+# Astro LCARS Theme
 
-```sh
-pnpm create astro@latest -- --template minimal
+This project is a reimagined LCARS implementation using our [`@withstudiocms/lcars-stylus`](https://github.com/withstudiocms/lcars-stylus/) Stylus design kit. Want to create a website or web interfaces that are inspired by your favorite Star Trek LCARS screens? This makes it easy!
+
+## Tech Stack
+
+- **Astro v6** - SSR-enabled with @astrojs/node adapter
+- **Stylus** - Robust, expressive, and feature-rich CSS superset
+- **WithStudioCMS LCARS-Stylus** - LCARS inspired design system built with Stylus
+- **Astro-OG-Canvas** - Generate OpenGraph images for your Astro site
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js 22+ or latest LTS
+- pnpm package manager
+
+### Installation
+
+```bash
+# Install dependencies
+pnpm install
+
+# Start development server
+pnpm dev
+
+# Build for production
+pnpm build
+
+# Preview production build
+pnpm preview
 ```
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+### Development
 
-## 🚀 Project Structure
+Customize to your hearts content, use the existing elements and pages as a template for how to expand on the current design to create your own look!
 
-Inside of your Astro project, you'll see the following folders and files:
+## Licensing
 
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+MIT Licensed 2026-Present - withstudiocms
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+LCARS is a copyright of CBS Studios INC. and Star Trek. All rights reserved. This project is not endorsed or affiliated with CBS or Star Trek in any way, this is a fan project meant solely for fun!
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
-
-Any static assets, like images, can be placed in the `public/` directory.
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `pnpm install`             | Installs dependencies                            |
-| `pnpm dev`             | Starts local dev server at `localhost:4321`      |
-| `pnpm build`           | Build your production site to `./dist/`          |
-| `pnpm preview`         | Preview your build locally, before deploying     |
-| `pnpm astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `pnpm astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+The Font used in this project is "LCARS GTJ3" from [gtjlcars.de](https://gtjlcars.de/LCARSindex/LCARSFONTS.htm)

@@ -8,6 +8,7 @@
         "flexbox",
         "Framecount",
         "grayscale",
+        "gtjlcars",
         "hopbush",
         "LCARS",
         "LCARSGTJ",
@@ -21,6 +22,7 @@
         "svgs",
         "tactinput",
         "tamarillo",
-        "tanoi"
+        "tanoi",
+        "withstudiocms"
     ]
 }
